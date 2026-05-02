@@ -14,16 +14,16 @@ Terminal reader for the **Body-Extension Archive**: read the thesis through a qu
 
 1. On the repository page, use **Code → Download ZIP**.
 2. Unzip the archive.
-3. Open a terminal and go into the folder that contains `read_body_extension_archive_cli.py` (often `body_extension_archive_reader` inside the unzipped project).
+3. Open a terminal and go into the unzipped folder that contains `read_body_extension_archive_cli.py` (GitHub’s ZIP is usually named like `body-extension-archive-reader-main`).
 
 **Option B — Git**
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>/body_extension_archive_reader
+git clone https://github.com/yingchenjoycelin/body-extension-archive-reader.git
+cd body-extension-archive-reader
 ```
 
-*(Adjust the `cd` path if your clone layout differs.)*
+The clone directory name matches the repository name above.
 
 ### 2. Requirements
 
