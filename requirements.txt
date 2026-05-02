@@ -1,0 +1,6 @@
+# Body-Extension Archive Reader — Python stack for embedding + CLI
+# Install: pip install -r requirements.txt
+# (sentence-transformers pulls torch/transformers as needed.)
+
+sentence-transformers>=2.2.0
+numpy>=2.0.0,<3
