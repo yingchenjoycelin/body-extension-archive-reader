@@ -1,6 +1,6 @@
 # Body-Extension Archive Reader
 
-Terminal reader for the **Body-Extension Archive**: read the thesis through a question-based interface, and optionally open source sections and version run logs.
+Terminal reader for the **Body-Extension Archive**: read thesis "Body-Extension Archive: Recursive Reconfiguration of Subjectivity" by Ying-Chen Joyce Lin through a question-based interface, and optionally open source sections and version run logs.
 
 **Bundled data:** `cli_reader_data/` already contains `query_to_top_thesis_chunk.md` and `thesis_chunks_inventory.md`. You do **not** need to regenerate anything to use the reader.
 
