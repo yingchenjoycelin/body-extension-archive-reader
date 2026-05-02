@@ -378,11 +378,18 @@ def run_interactive(entries: list[QueryChunkEntry], thesis_system_root: Path) ->
                 line = input("*** Enter (number or question, s / source) >>> ").strip()
         except EOFError:
             print()
+            if all_complete:
+                print("Goodbye <3")
+            else:
+                print("Goodbye :'(")
             break
 
         lower = line.lower()
         if lower in ("q", "quit", "exit"):
-            print("Goodbye.")
+            if all_complete:
+                print("Goodbye <3")
+            else:
+                print("Goodbye :'(")
             break
 
         if not line:
