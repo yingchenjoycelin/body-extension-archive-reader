@@ -108,6 +108,32 @@ python read_body_extension_archive_cli.py --database path/to/query_to_top_thesis
 
 Follow the on-screen prompts: numbers or full question text, **`s`** / **`source`** for extra thesis files, **`q`** / **`quit`** / **`exit`** to leave.
 
+### Troubleshooting: GitHub looks updated, but running the reader still feels old
+
+If `body-extension-archive-reader` **already exists** where you run `git clone`, the clone command **does not overwrite it** — you stay on an older copy without noticing.
+
+**Fresh clone — Windows PowerShell:**
+
+```powershell
+cd $HOME\Desktop
+Remove-Item -Recurse -Force .\body-extension-archive-reader -ErrorAction SilentlyContinue
+git clone https://github.com/yingchenjoycelin/body-extension-archive-reader.git
+cd body-extension-archive-reader
+```
+
+Then run [step 3](#3-run-the-reader). You can confirm you have the newest commit with `git log -1 --oneline` and compare it to the latest commit on GitHub (**main** branch).
+
+**Fresh clone — macOS / Linux** (adjust the folder if your Desktop path differs):
+
+```bash
+cd ~/Desktop
+rm -rf body-extension-archive-reader
+git clone https://github.com/yingchenjoycelin/body-extension-archive-reader.git
+cd body-extension-archive-reader
+```
+
+`rm -rf` permanently deletes that folder — only run it when you intend to replace the clone with a new download.
+
 ---
 
 ## What is in this folder
