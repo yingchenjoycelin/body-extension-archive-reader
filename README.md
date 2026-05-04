@@ -6,32 +6,89 @@ Terminal reader for the **Body-Extension Archive**: read thesis "Body-Extension 
 
 ---
 
-## Quick start (download → run)
+## Quick start (no coding background required)
+
+You only need to **install two small programs once** (Python and Git), **open a window called “Terminal”** on your computer, and **copy-paste a few lines** that this section gives you. You do not need to write any code; you are running a ready-made reader so you can explore the thesis interactively.
+
+**Simplest path:** install Python → install Git → open terminal → paste the **Option A** commands in [step 1](#1-get-this-folder-from-github) → then run the command in [step 3](#3-run-the-reader) → follow the on-screen instructions.
+
+### 0. Open a terminal (command line window)
+
+A **terminal** is a text window where you can type commands and press Enter. You need it for the steps below.
+
+| Your system | How to open it |
+|-------------|----------------|
+| **Windows** | Press **Win**, type **PowerShell** or **Command Prompt**, press **Enter**. (Or press **Win + R**, type `powershell`, press **Enter**.) |
+| **macOS** | Press **Cmd + Space**, type **Terminal**, press **Enter**. |
+| **Linux** | Open your app menu and launch **Terminal** (name may vary by distribution). |
+
+Keep this window open; you will paste commands here.
+
+### Install Python (one time)
+
+Python is the runtime that runs the reader script. You only install it once.
+
+1. Go to **[python.org/downloads](https://www.python.org/downloads/)** and download the installer for your system.
+2. Run the installer. On **Windows**, check **“Add python.exe to PATH”** (or similar wording) before finishing, then complete the install.
+3. **Close and reopen** the terminal, then check that it worked:
+
+```bash
+python --version
+```
+
+If that fails, try:
+
+```bash
+python3 --version
+```
+
+You should see a version like **3.10** or higher (3.11+ is fine). If neither command works, repeat the install with PATH enabled or use the “Python Launcher” from the Start menu documentation on [python.org](https://www.python.org/downloads/).
+
+### Install Git (one time, for Option A)
+
+**Git** is a small tool that can **download this project** with one command (`git clone`). If you use **Option A** in step 1 below, install Git once.
+
+1. Go to **[git-scm.com/downloads](https://git-scm.com/downloads)** and install Git for your system. Accept the default options unless you know you need something different.
+2. **Close and reopen** the terminal, then check:
+
+```bash
+git --version
+```
+
+You should see a version number. If you prefer **not** to install Git, use **Option B** in step 1 instead.
+
+---
 
 ### 1. Get this folder from GitHub
 
-**Option A — ZIP (no Git)**
+#### Option A — Git (recommended)
 
-1. On the repository page, use **Code → Download ZIP**.
-2. Unzip the archive.
-3. Open a terminal and go into the unzipped folder that contains `read_body_extension_archive_cli.py` (GitHub’s ZIP is usually named like `body-extension-archive-reader-main`).
-
-**Option B — Git**
+Copy these lines **one block at a time** into your terminal, pressing **Enter** after each line (or paste the whole block if your terminal allows it).
 
 ```bash
 git clone https://github.com/yingchenjoycelin/body-extension-archive-reader.git
 cd body-extension-archive-reader
 ```
 
-The clone directory name matches the repository name above.
+The second command moves you **into** the project folder. Your prompt should show `body-extension-archive-reader` (or similar). That folder must contain `read_body_extension_archive_cli.py`.
 
-### 2. Requirements
+#### Option B — ZIP (no Git)
 
-- **Python 3.10+** (3.11+ recommended; use `python3` on macOS/Linux if that is your default).
+1. On the GitHub repository page, click **Code → Download ZIP**.
+2. Unzip the archive (double-click the ZIP, then “Extract” or “Extract all”).
+3. In the terminal, **go to** the folder that contains `read_body_extension_archive_cli.py`. GitHub’s ZIP is often named like `body-extension-archive-reader-main`. On Windows, you can type `cd ` (with a space), then **drag the folder** from File Explorer into the terminal and press **Enter** to fill in the path.
 
-The reader script uses **only the Python standard library**. You do **not** need `pip install` or an internet connection **just to run** it.
+---
+
+### 2. Requirements (summary)
+
+- **Python 3.10+** (3.11+ recommended). On macOS or some Linux setups, use `python3` instead of `python` when you run the reader.
+
+The reader uses **only the Python standard library**. You do **not** need `pip install` or an internet connection **just to run** it (after you already have the folder).
 
 ### 3. Run the reader
+
+Make sure your terminal’s **current folder** is the project folder (the one with `read_body_extension_archive_cli.py`), then run:
 
 ```bash
 python read_body_extension_archive_cli.py
