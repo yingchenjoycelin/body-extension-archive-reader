@@ -387,9 +387,9 @@ def run_interactive(entries: list[QueryChunkEntry], thesis_system_root: Path) ->
         lower = line.lower()
         if lower in ("q", "quit", "exit"):
             if all_complete:
-                print("Goodbye <3")
+                print("Goodbye ;) <3 <3 <3 <3 <3 <3")
             else:
-                print("Goodbye :'(")
+                print("Goodbye :( . . . . . .")
             break
 
         if not line:
