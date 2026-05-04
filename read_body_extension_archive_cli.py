@@ -166,7 +166,7 @@ def resolve_choice(
         for e in entries:
             if e.order == n:
                 return e
-        # allow stripping leading zeros conceptually e.g. "01"
+        # allow stripping leading zeros conceptually e.g. "01", "02", etc.
         return None
     norm = _normalize_for_match(s)
     for e in entries:
