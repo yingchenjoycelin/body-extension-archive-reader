@@ -379,9 +379,9 @@ def run_interactive(entries: list[QueryChunkEntry], thesis_system_root: Path) ->
         except EOFError:
             print()
             if all_complete:
-                print("Goodbye <3")
+                print("Goodbye ;) <3 <3 <3 <3 <3 <3")
             else:
-                print("Goodbye :'(")
+                print("Goodbye :( . . . . . .")
             break
 
         lower = line.lower()
