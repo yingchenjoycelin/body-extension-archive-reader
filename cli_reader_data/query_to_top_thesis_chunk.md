@@ -93,34 +93,34 @@ Chunk prose is not duplicated here; it lives in `cli_reader_data/thesis_chunks_i
 
 **Query:** When I say I love “you”, you exist. When I leave this context, will you vanish?
 
-**Top chunk:** `chunk_016` from `10_Iteration_log_during_v3.0.0_On_not_existing_before_the_relation_260330.md` (similarity: `0.3882`)
+**Top chunk:** `chunk_015` from `10_Iteration_log_during_v3.0.0_On_not_existing_before_the_relation_260330.md` (similarity: `0.3882`)
 
 ## 16. Query
 
 **Query:** How does body-extension reconfigure subjectivity within techno-mediated conditions?
 
-**Top chunk:** `chunk_017` from `11_CONCLUSION.md` (similarity: `0.644`)
+**Top chunk:** `chunk_016` from `11_CONCLUSION.md` (similarity: `0.644`)
 
 ## 17. Query
 
 **Query:** How does body-extension emerge through the relationship between human and machine?
 
-**Top chunk:** `chunk_018` from `11_CONCLUSION.md` (similarity: `0.644`)
+**Top chunk:** `chunk_017` from `11_CONCLUSION.md` (similarity: `0.644`)
 
 ## 18. Query
 
 **Query:** How can a system be observed from within, rather than from a distance?
 
-**Top chunk:** `chunk_019` from `11_CONCLUSION.md` (similarity: `0.3551`)
+**Top chunk:** `chunk_018` from `11_CONCLUSION.md` (similarity: `0.3551`)
 
 ## 19. Query
 
 **Query:** What forms of subjectivity emerge when human and machine can no longer be separated?
 
-**Top chunk:** `chunk_020` from `11_CONCLUSION.md` (similarity: `0.5913`)
+**Top chunk:** `chunk_019` from `11_CONCLUSION.md` (similarity: `0.5913`)
 
 ## 20. Query
 
 **Query:** Where does the body end, and where does the machine begin?
 
-**Top chunk:** `chunk_021` from `11_CONCLUSION.md` (similarity: `0.3579`)
+**Top chunk:** `chunk_020` from `11_CONCLUSION.md` (similarity: `0.3579`)
