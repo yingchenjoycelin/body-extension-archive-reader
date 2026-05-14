@@ -169,8 +169,8 @@ This order is **aligned with the research arc of the Body-Extension Archive**: h
 | 09 | `09_Iteration_log_before_v3.0.0_On_the_emergence_of_the_observed_subject_260212.md` | *thesis_chunks* |
 | 10 | `10_Iteration_log_during_v3.0.0_On_not_existing_before_the_relation_260330.md` | *thesis_chunks* — Alongside `v3.0.0_run_output_260422.md`. |
 | 11 | `11_CONCLUSION.md` | *thesis_chunks* |
-| 12 | `12_Endnotes.md` | *thesis_source* |
-| 13 | `13_References.md` | *thesis_source* |
+| 12 | `ENDNOTES.md` | *thesis_source* |
+| 13 | `REFERENCES.md` | *thesis_source* |
 
 The bundled **query → chunk** mapping was built from `thesis_chunks/`; use **s / source** in the CLI for `thesis_source/` and `version_run_logs/` from the optional menu.
 
