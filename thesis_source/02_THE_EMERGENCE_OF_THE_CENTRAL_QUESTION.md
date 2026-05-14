@@ -6,7 +6,7 @@ The body no longer appears as a self-contained entity but as a relational config
 
 Within this trajectory, the central research question emerged:
 
-**How does body-extension reconfigure subjectivity within techno-mediated conditions?**
+*How does body-extension reconfigure subjectivity within techno-mediated conditions?*
 
 To address this overarching question, the following sub-questions structure the investigation:
 1. How does body-extension emerge through the relationship between human and machine?

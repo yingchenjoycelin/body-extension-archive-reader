@@ -4,11 +4,12 @@ Perhaps in the future the body could truly become indestructible, untouched by t
 
 Yet another part of me, grounded in lived experience, understands the body as the first object through which others perceive me, and as the surface upon which the difference between myself and others emerges. By distinguishing inside from outside, the boundaries of the body establish my relationship with others. In other words, it is through these entangled relations among self, others, digital and physical environments that I become who I am.
 
-<split>
+<split_chunck>
+
 Within the tension between these two conditions, I have actively treated my body in my artistic practice as an interface that can be read and triggered, while simultaneously resisting the consequences of fixing it as a mere object. For example, in my earlier work *sense data: cellular noise*, I have used the sound of my body to activate the light and sound system of a space while remaining motionless, curled inside a transparent container at the center of the room as an object. For me, the body does not end at the skin. The extension of perception through technology is the most exposed articulation of my thinking. Yet this instinctive resistance stems from my refusal to let the body be reduced to its outer flesh, where flesh and embodiment collapse into one another and the body’s intimacy disappears [2], or to treat bodily limitation as deficiency. In contrast to Stelarc’s understanding of the body as something that must be extended and enhanced through technology and regarded as an object that can be electronically sculpted [4], I argue that the problem is not extension itself, but the erasure of fragility within its utopian horizon. The fantasy of an indestructible body presupposes an ideal condition in which vulnerability, error, and dependency are eliminated. Yet it is precisely these conditions that make relationality possible.
 
-<split>
+<split_chunck>
+
 Within this contradiction, I no longer feel certain about what counts as my body, nor where the boundary between myself and technology truly lies. This resonates with Milon’s assertion that the body has no stable essence because it is internally composed of constant movement and potential. Extending Milon’s understanding of bodily instability, the body is no longer merely an interface but a site where relations are generated. We cannot grasp what the body is through a single sense or image. Rather, through exploring fragments of its interior and exterior under varying conditions through self-examination or through the gaze of others, its potential continues to expand. As Milon writes, “*The body is not the object of desire; it is desire itself. It is not a mode of expression but a field of existence. It exceeds the appearance of being and cannot simply be regarded as a spatial device*” [2].
 
 I can neither deny the profound infiltration of technology into bodily perception nor accept the reduction of the body into an empty shell awaiting optimization. I argue that within this irreversible technological condition, vulnerability remains the core through which the body generates relations with others.
-<split>

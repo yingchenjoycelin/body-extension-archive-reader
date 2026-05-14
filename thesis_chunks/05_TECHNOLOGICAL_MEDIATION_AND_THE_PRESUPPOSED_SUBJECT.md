@@ -4,8 +4,8 @@ Don Ihde extends Merleau-Ponty’s notion of the lived body by situating percept
 
 From this perspective, Ihde introduces the concept of technological intentionality. Technologies are not neutral intermediaries; they possess trajectories and directional influences that shape how the world appears and how actions unfold. Yet technological intentionality does not imply autonomous agency. Technologies do not act independently of human practice but co-constitute experiential structures within situated relations. Mediation, therefore, does not simply occur between a pre-given subject and object; it co-shapes both subjectivity and objectivity. Postphenomenology [5] thus proceeds not by imposing philosophical theory upon technology, but by analyzing philosophy from concrete technological practices.
 
-<split>
+<split_chunck>
+
 Nevertheless, even within Ihde’s typology of mediation relations<sup>1</sup> , such as embodiment relations (I–technology → world) and hermeneutic relations (I → technology–world), a distinguishable subject remains presupposed.
 
 In my artistic system, this duality begins to collapse. When bodily indeterminacy is taken seriously, this analytic clarity becomes unstable. Mediation can no longer be understood as occurring between relatively fixed positions. Instead, mediation becomes recursive. The I, technology, and world no longer stand in structured relations but form a dynamic assemblage whose boundaries are unstable. Depending on the context, this assemblage may appear as subject or object, yet its ontological position is not fixed.
-<split>

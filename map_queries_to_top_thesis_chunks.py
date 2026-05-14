@@ -61,7 +61,7 @@ def load_query_pool(path: Path) -> list[tuple[str, str]]:
         raise
 
 
-_SPLIT_MARKER = re.compile(r"\s*<split>\s*", re.IGNORECASE)
+_SPLIT_MARKER = re.compile(r"\s*<split_chunck>\s*", re.IGNORECASE)
 
 
 def _normalize_chunk_preserving_paragraphs(raw: str) -> str:
@@ -80,7 +80,7 @@ def _normalize_chunk_preserving_paragraphs(raw: str) -> str:
 
 
 def split_at_split_markers(text: str) -> list[str]:
-    """Split thesis source on `<split>` markers; preserve paragraph breaks within each chunk."""
+    """Split thesis source on `<split_chunck>` markers; preserve paragraph breaks within each chunk."""
     parts = _SPLIT_MARKER.split(text.strip())
     cleaned = [_normalize_chunk_preserving_paragraphs(p) for p in parts]
     return [c for c in cleaned if c]
@@ -175,7 +175,7 @@ def write_chunk_inventory_markdown(chunks: list[ThesisChunk], out_path: Path) ->
     lines: list[str] = [
         "# Thesis Chunk Inventory",
         "",
-        "Chunks split at `<split>` markers under `body_extension_archive_reader/thesis_chunks`; "
+        "Chunks split at `<split_chunck>` markers under `body_extension_archive_reader/thesis_chunks`; "
         "blank lines between paragraphs are kept inside each chunk.",
         "",
     ]
