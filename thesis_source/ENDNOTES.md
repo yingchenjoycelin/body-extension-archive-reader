@@ -3,7 +3,6 @@
 1.
 Don Ihde systematizes the Human–Technology–World structure as a triadic framework for understanding mediated experience [1]. Rather than conceiving experience as a simple subject–object relation, he argues that human–world relations are always technologically mediated and can be differentiated into distinct relational structures.
 
-
 The first is the embodiment relation, structured as (I–technology) → world. In this configuration, technology is incorporated into the user’s bodily schema and functions as an extension of perception. Technologies such as eyeglasses become experientially transparent, allowing the user to perceive the world through them rather than thematically attending to them.
 
 The second is the hermeneutic relation, structured as I → (technology–world). Here, technology does not withdraw into bodily transparency but instead presents representations that require interpretation. Instruments such as thermometers or infrared imaging devices mediate the world symbolically; the user must read or interpret the technological output in order to understand the environment.
