@@ -204,8 +204,8 @@ OPTIONAL_CONTEXT_SECTIONS: tuple[tuple[str, str, tuple[tuple[str, str], ...]], .
             ("A", "01_EMBODIED_ITERATION_AS_METHOD.md"),
             ("B", "02_THE_EMERGENCE_OF_THE_CENTRAL_QUESTION.md"),
             ("C", "06_BODY_EXTENSION_ARCHIVE_INTRO.md"),
-            ("D", "12_Endnotes.md"),
-            ("E", "13_References.md"),
+            ("D", "ENDNOTES.md"),
+            ("E", "REFERENCES.md"),
         ),
     ),
     (
