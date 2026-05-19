@@ -4,7 +4,7 @@ Terminal reader for the **Body-Extension Archive**: read thesis "Body-Extension 
 
 **Research arc:** To see how the thesis is ordered, read the [Thesis structure](#thesis-structure) section below.
 
-**Start the reader:** Follow the [Quick start](#quick-start-no-coding-background-required) section below (install Python and Git once, then run the reader from the terminal).
+**Start the reader:** Follow the [Quick start](#quick-start-no-coding-background-required) section below (install Python and Git once, open a new Terminal window, then run the reader).
 
 **Bundled data:** `cli_reader_data/` already contains `query_to_top_thesis_chunk.md` and `thesis_chunks_inventory.md`. You do **not** need to regenerate anything to use the reader.
 
@@ -12,21 +12,9 @@ Terminal reader for the **Body-Extension Archive**: read thesis "Body-Extension 
 
 ## Quick start (no coding background required)
 
-You only need to **install two small programs once** (Python and Git), **open a window called “Terminal”** on your computer, and **copy-paste a few lines** that this section gives you.
+You only need to **install two small programs once** (Python and Git), then **open a window called “Terminal”** on your computer and **copy-paste a few lines** that this section gives you.
 
-**Simplest path:** install Python → install Git → open terminal → paste the **Option A** commands in [step 1](#1-get-this-folder-from-github) → then run the command in [step 3](#3-run-the-reader) → follow the on-screen instructions.
-
-### 0. Open a terminal (command line window)
-
-A **terminal** is a text window where you can type commands and press Enter. You need it for the steps below.
-
-| Your system | How to open it |
-|-------------|----------------|
-| **Windows** | Press **Win**, type **PowerShell** or **Command Prompt**, press **Enter**. (Or press **Win + R**, type `powershell`, press **Enter**.) |
-| **macOS** | Press **Cmd + Space**, type **Terminal**, press **Enter**. |
-| **Linux** | Open your app menu and launch **Terminal** (name may vary by distribution). |
-
-Keep this window open; you will paste commands here.
+**Simplest path:** install Python → install Git → **open a new Terminal window** (so it sees Python and Git) → verify → paste the **Option A** commands in [step 1](#1-get-this-folder-from-github) → then run the command in [step 2](#2-run-the-reader) → follow the on-screen instructions.
 
 ### Install Python (one time)
 
@@ -34,7 +22,32 @@ Python is the runtime that runs the reader script. You only install it once.
 
 1. Go to **[python.org/downloads](https://www.python.org/downloads/)** and download the installer for your system.
 2. Run the installer. On **Windows**, check **“Add python.exe to PATH”** (or similar wording) before finishing, then complete the install.
-3. **Close and reopen** the terminal, then check that it worked:
+
+You will check that Python works in [Open a terminal](#open-a-terminal-command-line-window) below (after a **new** terminal window is open).
+
+### Install Git (one time, for Option A)
+
+**Git** is a small tool that can **download this project** with one command (`git clone`). If you use **Option A** in step 1 below, install Git once.
+
+1. Go to **[git-scm.com/downloads](https://git-scm.com/downloads)** and install Git for your system. Accept the default options unless you know you need something different.
+
+You will check that Git works in [Open a terminal](#open-a-terminal-command-line-window) below. If you prefer **not** to install Git, use **Option B** in step 1 instead.
+
+### Open a terminal (command line window)
+
+A **terminal** is a text window where you can type commands and press Enter.
+
+**After installing Python and Git**, open a **new** terminal window (or **close and reopen** Terminal if it was already open during install). A fresh window picks up PATH changes so `python` and `git` are found.
+
+| Your system | How to open it |
+|-------------|----------------|
+| **Windows** | Press **Win**, type **Terminal**, press **Enter**, and open the app named **Terminal** (Windows Terminal). |
+| **macOS** | Press **Cmd + Space**, type **Terminal**, press **Enter**. |
+| **Linux** | Open your app menu and launch **Terminal** (name may vary by distribution). |
+
+On **Windows**, use **Terminal** (not **Windows PowerShell** from the Start menu) for the steps below. If you run `git clone` in PowerShell, you may see **permission denied**; switching to **Terminal** avoids that.
+
+**Check Python and Git** in this window:
 
 ```bash
 python --version
@@ -46,20 +59,15 @@ If that fails, try:
 python3 --version
 ```
 
-You should see a version like **3.10** or higher (3.11+ is fine). If neither command works, repeat the install with PATH enabled or use the “Python Launcher” from the Start menu documentation on [python.org](https://www.python.org/downloads/).
-
-### Install Git (one time, for Option A)
-
-**Git** is a small tool that can **download this project** with one command (`git clone`). If you use **Option A** in step 1 below, install Git once.
-
-1. Go to **[git-scm.com/downloads](https://git-scm.com/downloads)** and install Git for your system. Accept the default options unless you know you need something different.
-2. **Close and reopen** the terminal, then check:
+You should see a version like **3.10** or higher (3.11+ is fine). If neither command works, repeat the Python install with PATH enabled or see [python.org/downloads](https://www.python.org/downloads/).
 
 ```bash
 git --version
 ```
 
-You should see a version number. If you prefer **not** to install Git, use **Option B** in step 1 instead.
+You should see a version number (skip this if you will use **Option B — ZIP** in step 1).
+
+Keep this window open; you will paste the remaining commands here.
 
 ---
 
@@ -84,15 +92,13 @@ The second command moves you **into** the project folder. Your prompt should sho
 
 ---
 
-### 2. Requirements (summary)
+### 2. Run the reader
 
-- **Python 3.10+** (3.11+ recommended). On macOS or some Linux setups, use `python3` instead of `python` when you run the reader.
+Make sure your terminal’s **current folder** is the project folder (the one with `read_body_extension_archive_cli.py`).
 
-The reader uses **only the Python standard library**. You do **not** need `pip install` or an internet connection **just to run** it (after you already have the folder).
+The reader needs **Python 3.10+** (already installed above) and uses **only the Python standard library** — no `pip install` and no internet connection **just to run** it (after you have the folder). On macOS or some Linux setups, use `python3` instead of `python` below.
 
-### 3. Run the reader
-
-Make sure your terminal’s **current folder** is the project folder (the one with `read_body_extension_archive_cli.py`), then run:
+Then run:
 
 ```bash
 python read_body_extension_archive_cli.py
@@ -116,7 +122,7 @@ Follow the on-screen prompts: numbers or full question text, **`s`** / **`source
 
 If `body-extension-archive-reader` **already exists** where you run `git clone`, the clone command **does not overwrite it** — you stay on an older copy without noticing.
 
-**Fresh clone — Windows PowerShell:**
+**Fresh clone — Windows (use Terminal from step 0, not PowerShell from Start):**
 
 ```powershell
 cd $HOME\Desktop
@@ -125,7 +131,7 @@ git clone https://github.com/yingchenjoycelin/body-extension-archive-reader.git
 cd body-extension-archive-reader
 ```
 
-Then run [step 3](#3-run-the-reader). You can confirm you have the newest commit with `git log -1 --oneline` and compare it to the latest commit on GitHub (**main** branch).
+Then run [step 2](#2-run-the-reader). You can confirm you have the newest commit with `git log -1 --oneline` and compare it to the latest commit on GitHub (**main** branch).
 
 **Fresh clone — macOS / Linux** (adjust the folder if your Desktop path differs):
 
