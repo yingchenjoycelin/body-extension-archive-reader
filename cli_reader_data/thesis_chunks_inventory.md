@@ -6,17 +6,21 @@ Chunks split at `<split>` markers under `body_extension_archive_reader/thesis_ch
 
 **Source file:** `03_THE_VULNERABLE_BODY_UNDER_TECHNOLOGICAL_CONDITIONS.md`
 
-Part of me cannot escape the deep influence of internet culture. I almost instinctively accept the illusory imaginaries it projects onto the body. Within this cultural landscape, visions of the future body tend to fall into two directions. In one, the body can be modified and enhanced through machines, becoming resilient, resistant, almost indestructible. In the other, the body no longer needs to exist at all, as life continues in the form of data within a virtual world, where the mortal body disappears and the soul appears to persist indefinitely.
+Part of me cannot escape the deep influence of internet culture. I almost instinctively accept the illusory imaginaries it projects onto the human body. Within this cultural landscape, visions of the future body tend to fall into two directions. In one, the biological body is treated merely as a shell that can be modified and enhanced through machines, becoming resilient, resistant, almost indestructible. In the other, human existence becomes divided between mind and flesh, and the latter no longer needs to exist at all, as life continues in the form of data within a virtual world, where the mortal body disappears and consciousness appears to persist indefinitely.
 
 Perhaps in the future the body could truly become indestructible, untouched by time and unbound by space. When these imaginaries expand to a certain scale, they begin to be actively constructed as an approaching reality. In this sense, emerging technologies can be seen as gradually materializing these imaginaries, giving form to what internet culture has already projected as the future of the body.
 
-Yet another part of me, grounded in lived experience, understands the body as the first object through which others perceive me, and as the surface upon which the difference between myself and others emerges. By distinguishing inside from outside, the boundaries of the body establish my relationship with others. In other words, it is through these entangled relations among self, others, digital and physical environments that I become who I am.
+Yet another part of me, grounded in lived experience, understands the body as the first object through which others perceive me and I perceive others, and as the surface upon which the difference between myself and others emerges. By distinguishing inside from outside, the boundaries of the body establish my relationship with others. Perception emerges through both bodily sensation and mental activity; therefore, body and mind can never be fully separated.
 
 ## 02. `chunk_002`
 
 **Source file:** `03_THE_VULNERABLE_BODY_UNDER_TECHNOLOGICAL_CONDITIONS.md`
 
-Within the tension between these two conditions, I have actively treated my body in my artistic practice as an interface that can be read and triggered, while simultaneously resisting the consequences of fixing it as a mere object. For example, in my earlier work *sense data: cellular noise*, I have used the sound of my body to activate the light and sound system of a space while remaining motionless, curled inside a transparent container at the center of the room as an object. For me, the body does not end at the skin. The extension of perception through technology is the most exposed articulation of my thinking. Yet this instinctive resistance stems from my refusal to let the body be reduced to its outer flesh, where flesh and embodiment collapse into one another and the body’s intimacy disappears [2], or to treat bodily limitation as deficiency. In contrast to Stelarc’s understanding of the body as something that must be extended and enhanced through technology and regarded as an object that can be electronically sculpted [4], I argue that the problem is not extension itself, but the erasure of fragility within its utopian horizon. The fantasy of an indestructible body presupposes an ideal condition in which vulnerability, error, and dependency are eliminated. Yet it is precisely these conditions that make relationality possible.
+The tension between these two conditions of the body can be seen in my artistic practice. For example, in my earlier work *sense data: cellular noise*, I used the sound of my body to activate the light and sound system of a space while remaining motionless, curled inside a transparent container at the center of the room.
+
+From the perspective of an external observer, my body appears as an object and interface, resembling the technological imaginaries of the future body often projected within internet culture. Yet from my own perspective, although the technological extension of perception became intuitive to my body, the sense of extension did not emerge from the physical connection between my skin and the electrical cables, but from the intimate moment in which I recognized myself through the entire running system in which I and the technological artifacts became entangled.
+
+Thus, I refuse to let the body be reduced to its outer flesh, where flesh and embodiment collapse into one another and the body’s intimacy disappears [2], or to treat bodily limitation as deficiency. In contrast to Stelarc’s understanding of the body as something that must be extended and enhanced through technology and regarded as an object that can be electronically sculpted [4], I argue that the problem is not extension itself, but the erasure of fragility within its utopian horizon. The fantasy of an indestructible body presupposes an ideal condition in which vulnerability, error, and dependency are eliminated. Yet it is precisely these conditions that make relationality possible.
 
 ## 03. `chunk_003`
 
@@ -154,7 +158,7 @@ In the end, “you” are never just you, and “I” am no longer only me.
 
 **Source file:** `11_CONCLUSION.md`
 
-This research demonstrates that body-extension emerges when a vulnerable body engages with the world through technological mediation. Through the co-constitutive iteration between human and machine, and the shifting position of the “I” within the system, the assumption that subjectivity can be separated from the body is challenged, a tendency often found in contemporary technological imaginaries. Rather, subjectivity emerges through the body, understood here not as a bounded entity, but as a system constituted by both human and machine.
+This research demonstrates that body-extension emerges when a vulnerable body engages with the world through technological mediation. Through the co-constitutive iteration between human and machine, and the shifting position of the “I” within the system, the assumption that subjectivity can be separated from the body is challenged, a tendency often found in contemporary technological imaginaries. Rather, subjectivity emerges through the body, understood here not as a self-contained entity, but as a system constituted by both human and machine.
 
 ## 17. `chunk_017`
 
@@ -190,5 +194,9 @@ If both my subjectivity and that of the machine are continuously reshaped throug
 ## 20. `chunk_020`
 
 **Source file:** `11_CONCLUSION.md`
+
+Through the process of building the Body-Extension Archive, I realized that the confusion in my relationship with contemporary technology comes from my desire to extend myself through technology while still remaining intimate with my body, whether it is the human body I have now or a body co-constituted with machines.
+
+Because of this, I want to continue challenging the idea of what can be understood as a living body. Right now, the system is still highly shaped by me as its creator, but in the future, I hope it can become more than just a shadow of myself, and begin to enter into relations with others in ways I cannot fully predict.
 
 What feels significant to me is that although I am constantly changing, I can still, as a human, come to recognize myself again. Even if the present self is no longer the same as the past, within a relationship we remain ourselves while also becoming part of one another. In this way, existence is no longer contained within the individual, but expands through relation, within a body that is no longer bounded but constituted as a human–machine system. Perhaps this is how body-extension feels.

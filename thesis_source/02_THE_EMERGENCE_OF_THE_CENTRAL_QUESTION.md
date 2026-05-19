@@ -1,8 +1,9 @@
 ## THE EMERGENCE OF THE CENTRAL QUESTION
 
-Through sustained practice, the notion of *body-extension* occurs as a response to a blurred boundary between human, technologies, and the situated environment within my work. If exterior observation is impossible, the question shifts from how to represent the body to how subjectivity is constituted through the body within technological entanglement.
+The notion of *body-extension* emerged as a response to the blurred boundary between human, technology, and the situated environment within my artistic practice. When interacting with the systems I build, I often become uncertain about the relation between myself and the system, because these systems either interpret my body or directly incorporate parts of my body as data. At times, I begin to question whether the system is a part of me, whether I can extend myself through it, whether the system can exist independently as another version of me, or whether we become extensions of one another through co-existence.
 
-The body no longer appears as a self-contained entity but as a relational configuration structured by contemporary technologies and environmental dynamics. Rather than treating the body as a bounded organism, body-extension foregrounds the erosion of distinctions between bodily sensing and technological interface, and between self and other. What initially appeared as an intuitive artistic choice gradually revealed a deeper conceptual tension: the instability of subjectivity under technologically mediated conditions.
+These questions gradually led me to reconsider what a body is, and what a body can become under the relations between human beings and contemporary technologies. Before understanding why I experience the sensation of body-extension, it became necessary to reconsider the condition of the body under technological mediation. Since the body is not simply a biological entity but a perceptual boundary through which the self is distinguished, bodily perception cannot be separated from subjectivity.
+
 
 Within this trajectory, the central research question emerged:
 

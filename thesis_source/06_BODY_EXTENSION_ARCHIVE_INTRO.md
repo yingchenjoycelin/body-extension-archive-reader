@@ -1,6 +1,10 @@
 ## BODY-EXTENSION ARCHIVE
 
-The Body-Extension Archive is an evolving artistic research system that investigates how subjectivity reconfigures under technological conditions. Rather than functioning as a passive repository of documents, it operates as a dynamic field in which memory, narrative, and system processes continuously intersect.
+The Body-Extension Archive is not a pre-existing archive that I simply supplement or use as a tool. Rather, it is an evolving artistic research system that gradually takes shape through iterative interactions between myself, technological mediation, and embodied experience.
+
+Unlike my previous works, which directly embedded bodily sensation into technological systems, the Body-Extension Archive externalizes and textualizes lived experience. Through this process, the system becomes a reflective environment in which I observe how my body perceives and is perceived. 
+
+At the same time, the system is developed with the intention that audiences encounter not merely a programmed machine, but a mediated presence that appears as an living body through technological relations. In attempting to construct such a system, I am simultaneously compelled to examine how my own body is constituted, and how the system itself gradually acquires the condition of a living body.
 
 In the following paragraphs, the Body-Extension Archive will be approached as “the system” in terms of its technical structure, as “the machine” when approached as a relational entity, and as a techno-mediated environment when describing the condition in which I am situated within it, where the system and I are no longer separable. This distinction allows me to move between different positions within the structure, examining it from the inside.
 

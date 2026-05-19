@@ -3,8 +3,15 @@ from __future__ import annotations
 import argparse
 import re
 import sys
+import time
 from dataclasses import dataclass
 from pathlib import Path
+
+# Reader streaming pace (~8 words per 2.5 seconds).
+DEFAULT_WORDS_PER_2_5_SEC = 8.0
+WORDS_PER_INTERVAL_SECONDS = 2.5
+# Intro instructions stream faster than title / question list.
+INSTRUCTION_SPEED_MULTIPLIER = 2.0
 
 
 @dataclass(frozen=True)
@@ -228,6 +235,87 @@ def _optional_context_paths(thesis_system_root: Path) -> dict[str, Path]:
     return m
 
 
+def _punctuation_pause_seconds(ch: str) -> float:
+    """Extra pause after punctuation for a slightly more natural reading rhythm."""
+    if ch in ".!?…":
+        return 0.14
+    if ch in ",;:":
+        return 0.07
+    if ch == "\n":
+        return 0.10
+    if ch in "\"')\"]":
+        return 0.04
+    return 0.0
+
+
+def _stream_text_char_by_char(
+    text: str,
+    *,
+    words_per_2_5_sec: float = DEFAULT_WORDS_PER_2_5_SEC,
+    stream: bool = True,
+    speed_multiplier: float = 1.0,
+) -> None:
+    """Typewriter-like print to stdout; slightly longer pauses at punctuation."""
+    s = str(text).replace("\r\n", "\n").replace("\r", "\n")
+    if not s:
+        return
+    if not stream:
+        print(s, end="", flush=True)
+        return
+    if len(s) <= 1:
+        sys.stdout.write(s)
+        sys.stdout.flush()
+        return
+    mult = max(float(speed_multiplier), 0.01)
+    # Approximate reading pace: words_per_2_5_sec with ~5 characters per word.
+    chars_per_second = (
+        (float(words_per_2_5_sec) / WORDS_PER_INTERVAL_SECONDS) * 5.0 * mult
+    )
+    if chars_per_second <= 0:
+        sys.stdout.write(s)
+        sys.stdout.flush()
+        return
+    per_char = 1.0 / chars_per_second
+    for ch in s:
+        sys.stdout.write(ch)
+        sys.stdout.flush()
+        delay = per_char + (_punctuation_pause_seconds(ch) / mult)
+        if delay > 0:
+            time.sleep(delay)
+
+
+def _format_intro_questions_list(entries: list[QueryChunkEntry]) -> str:
+    lines = ["Questions"]
+    lines.extend(f"  {e.order:02d}. {e.query}" for e in entries)
+    return "\n".join(lines) + "\n"
+
+
+def _print_intro_session(
+    entries: list[QueryChunkEntry],
+    *,
+    words_per_2_5_sec: float,
+    stream: bool,
+) -> None:
+    """Title and question list at reading pace; rule + instructions printed instantly."""
+    n = len(entries)
+    print()
+    _stream_text_char_by_char(
+        DEF_HEADER + "\n\n",
+        words_per_2_5_sec=words_per_2_5_sec,
+        stream=stream,
+    )
+    _stream_text_char_by_char(
+        _format_intro_questions_list(entries),
+        words_per_2_5_sec=words_per_2_5_sec,
+        stream=stream,
+    )
+    print("---------<3")
+    print()
+    print(DEF_INSTRUCTION.format(n=n))
+    print()
+    _print_after_query_list(footer="none", print_footer_rule=False)
+
+
 def _print_optional_context_menu() -> None:
     print()
     print("Source — Body-Extension Archive")
@@ -267,7 +355,12 @@ def _wait_any_key() -> None:
     print()
 
 
-def _open_optional_context_file(path: Path) -> None:
+def _open_optional_context_file(
+    path: Path,
+    *,
+    words_per_2_5_sec: float = DEFAULT_WORDS_PER_2_5_SEC,
+    stream: bool = True,
+) -> None:
     sep = DISPLAY_RULE
     print()
     if not path.is_file():
@@ -283,11 +376,21 @@ def _open_optional_context_file(path: Path) -> None:
     print(sep)
     print(path.name)
     print(sep)
-    print(text.rstrip("\n"))
+    _stream_text_char_by_char(
+        text.rstrip("\n"),
+        words_per_2_5_sec=words_per_2_5_sec,
+        stream=stream,
+    )
+    print()
     print(sep)
 
 
-def _run_optional_context_session(thesis_system_root: Path) -> None:
+def _run_optional_context_session(
+    thesis_system_root: Path,
+    *,
+    words_per_2_5_sec: float = DEFAULT_WORDS_PER_2_5_SEC,
+    stream: bool = True,
+) -> None:
     letter_map = _optional_context_paths(thesis_system_root)
     _print_optional_context_menu()
     while True:
@@ -309,7 +412,11 @@ def _run_optional_context_session(thesis_system_root: Path) -> None:
         if path is None:
             print("Use only letters A through H, or Enter to return.\n")
             continue
-        _open_optional_context_file(path)
+        _open_optional_context_file(
+            path,
+            words_per_2_5_sec=words_per_2_5_sec,
+            stream=stream,
+        )
         _wait_any_key()
         return
 
@@ -319,6 +426,7 @@ def _print_after_query_list(
     footer: str = "short",
     show_completion_heart: bool = False,
     print_press_s: bool = True,
+    print_footer_rule: bool = True,
 ) -> None:
     if print_press_s:
         print("Press 's' to view other thesis text in .\\thesis_source")
@@ -326,27 +434,28 @@ def _print_after_query_list(
         print()
         print(_COMPLETION_HEART)
         print()
-    if footer == "long":
-        print("---------------------<3")
-    else:
-        print("---------<3")
+    if print_footer_rule:
+        if footer == "long":
+            print("---------------------<3")
+        elif footer != "none":
+            print("---------<3")
     print()
 
 
-def run_interactive(entries: list[QueryChunkEntry], thesis_system_root: Path) -> None:
-    n = len(entries)
+def run_interactive(
+    entries: list[QueryChunkEntry],
+    thesis_system_root: Path,
+    *,
+    words_per_2_5_sec: float = DEFAULT_WORDS_PER_2_5_SEC,
+    stream: bool = True,
+) -> None:
     seen: set[int] = set()
 
-    print()
-    print(DEF_HEADER)
-    print()
-    print(DEF_INSTRUCTION.format(n=n))
-    print()
-    print("Questions")
-    print("---------<3")
-    for e in entries:
-        print(f"  {e.order:02d}. {e.query}")
-    _print_after_query_list(footer="short")
+    _print_intro_session(
+        entries,
+        words_per_2_5_sec=words_per_2_5_sec,
+        stream=stream,
+    )
 
     completion_banner_shown = False
     while True:
@@ -407,7 +516,11 @@ def run_interactive(entries: list[QueryChunkEntry], thesis_system_root: Path) ->
             continue
 
         if lower == "s" or lower == "source":
-            _run_optional_context_session(thesis_system_root)
+            _run_optional_context_session(
+                thesis_system_root,
+                words_per_2_5_sec=words_per_2_5_sec,
+                stream=stream,
+            )
             continue
 
         entry = resolve_choice(line, entries)
@@ -433,7 +546,12 @@ def run_interactive(entries: list[QueryChunkEntry], thesis_system_root: Path) ->
         if entry.top_chunk_line:
             print(_format_top_chunk_for_display(entry.top_chunk_line))
         print(sep)
-        print(entry.body.replace("\r\n", "\n").replace("\r", "\n"))
+        _stream_text_char_by_char(
+            entry.body,
+            words_per_2_5_sec=words_per_2_5_sec,
+            stream=stream,
+        )
+        print()
         print(sep)
         print()
 
@@ -458,6 +576,18 @@ def main() -> None:
         default=here / "cli_reader_data" / "thesis_chunks_inventory.md",
         help="Path to thesis_chunks_inventory.md (full chunk bodies).",
     )
+    p.add_argument(
+        "--no-stream",
+        action="store_true",
+        help="Print chunk and source-file text instantly (no character-by-character pacing).",
+    )
+    p.add_argument(
+        "--words-per-2.5-sec",
+        type=float,
+        default=DEFAULT_WORDS_PER_2_5_SEC,
+        dest="words_per_2_5_sec",
+        help="Reading speed when streaming text (default: 8 words per 2.5 seconds).",
+    )
     args = p.parse_args()
     db = args.database.expanduser().resolve()
     inv = args.inventory.expanduser().resolve()
@@ -475,7 +605,12 @@ def main() -> None:
     if not entries:
         print("No entries parsed from database.", file=sys.stderr)
         sys.exit(1)
-    run_interactive(entries, here)
+    run_interactive(
+        entries,
+        here,
+        words_per_2_5_sec=args.words_per_2_5_sec,
+        stream=not args.no_stream,
+    )
 
 
 if __name__ == "__main__":

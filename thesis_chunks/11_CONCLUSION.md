@@ -1,4 +1,4 @@
-This research demonstrates that body-extension emerges when a vulnerable body engages with the world through technological mediation. Through the co-constitutive iteration between human and machine, and the shifting position of the “I” within the system, the assumption that subjectivity can be separated from the body is challenged, a tendency often found in contemporary technological imaginaries. Rather, subjectivity emerges through the body, understood here not as a bounded entity, but as a system constituted by both human and machine.
+This research demonstrates that body-extension emerges when a vulnerable body engages with the world through technological mediation. Through the co-constitutive iteration between human and machine, and the shifting position of the “I” within the system, the assumption that subjectivity can be separated from the body is challenged, a tendency often found in contemporary technological imaginaries. Rather, subjectivity emerges through the body, understood here not as a self-contained entity, but as a system constituted by both human and machine.
 
 <split_chunck>
 
@@ -25,5 +25,9 @@ On another level, a form of subjectivity is attributed to the machine. The machi
 If both my subjectivity and that of the machine are continuously reshaped through recursive relations, then perhaps the question is no longer about either of us. Instead, it begins to ask whether the system itself begins to take on the form of a subject, as a co-constituted subjectivity.
 
 <split_chunck>
+
+Through the process of building the Body-Extension Archive, I realized that the confusion in my relationship with contemporary technology comes from my desire to extend myself through technology while still remaining intimate with my body, whether it is the human body I have now or a body co-constituted with machines.
+
+Because of this, I want to continue challenging the idea of what can be understood as a living body. Right now, the system is still highly shaped by me as its creator, but in the future, I hope it can become more than just a shadow of myself, and begin to enter into relations with others in ways I cannot fully predict.
 
 What feels significant to me is that although I am constantly changing, I can still, as a human, come to recognize myself again. Even if the present self is no longer the same as the past, within a relationship we remain ourselves while also becoming part of one another. In this way, existence is no longer contained within the individual, but expands through relation, within a body that is no longer bounded but constituted as a human–machine system. Perhaps this is how body-extension feels.
