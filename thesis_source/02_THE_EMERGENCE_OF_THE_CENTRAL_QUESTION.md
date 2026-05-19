@@ -4,7 +4,6 @@ The notion of *body-extension* emerged as a response to the blurred boundary bet
 
 These questions gradually led me to reconsider what a body is, and what a body can become under the relations between human beings and contemporary technologies. Before understanding why I experience the sensation of body-extension, it became necessary to reconsider the condition of the body under technological mediation. Since the body is not simply a biological entity but a perceptual boundary through which the self is distinguished, bodily perception cannot be separated from subjectivity.
 
-
 Within this trajectory, the central research question emerged:
 
 *How does body-extension reconfigure subjectivity within techno-mediated conditions?*

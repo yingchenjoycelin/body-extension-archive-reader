@@ -285,8 +285,9 @@ def _stream_text_char_by_char(
 
 
 def _format_intro_questions_list(entries: list[QueryChunkEntry]) -> str:
-    lines = ["Questions"]
+    lines = ["Questions", "---------<3"]
     lines.extend(f"  {e.order:02d}. {e.query}" for e in entries)
+    lines.append("---------<3")
     return "\n".join(lines) + "\n"
 
 
@@ -309,7 +310,6 @@ def _print_intro_session(
         words_per_2_5_sec=words_per_2_5_sec,
         stream=stream,
     )
-    print("---------<3")
     print()
     print(DEF_INSTRUCTION.format(n=n))
     print()
@@ -355,12 +355,7 @@ def _wait_any_key() -> None:
     print()
 
 
-def _open_optional_context_file(
-    path: Path,
-    *,
-    words_per_2_5_sec: float = DEFAULT_WORDS_PER_2_5_SEC,
-    stream: bool = True,
-) -> None:
+def _open_optional_context_file(path: Path) -> None:
     sep = DISPLAY_RULE
     print()
     if not path.is_file():
@@ -376,21 +371,11 @@ def _open_optional_context_file(
     print(sep)
     print(path.name)
     print(sep)
-    _stream_text_char_by_char(
-        text.rstrip("\n"),
-        words_per_2_5_sec=words_per_2_5_sec,
-        stream=stream,
-    )
-    print()
+    print(text.rstrip("\n"))
     print(sep)
 
 
-def _run_optional_context_session(
-    thesis_system_root: Path,
-    *,
-    words_per_2_5_sec: float = DEFAULT_WORDS_PER_2_5_SEC,
-    stream: bool = True,
-) -> None:
+def _run_optional_context_session(thesis_system_root: Path) -> None:
     letter_map = _optional_context_paths(thesis_system_root)
     _print_optional_context_menu()
     while True:
@@ -412,11 +397,7 @@ def _run_optional_context_session(
         if path is None:
             print("Use only letters A through H, or Enter to return.\n")
             continue
-        _open_optional_context_file(
-            path,
-            words_per_2_5_sec=words_per_2_5_sec,
-            stream=stream,
-        )
+        _open_optional_context_file(path)
         _wait_any_key()
         return
 
@@ -516,11 +497,7 @@ def run_interactive(
             continue
 
         if lower == "s" or lower == "source":
-            _run_optional_context_session(
-                thesis_system_root,
-                words_per_2_5_sec=words_per_2_5_sec,
-                stream=stream,
-            )
+            _run_optional_context_session(thesis_system_root)
             continue
 
         entry = resolve_choice(line, entries)
