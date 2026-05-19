@@ -2,13 +2,17 @@
 
 Terminal reader for the **Body-Extension Archive**: read thesis "Body-Extension Archive: Recursive Reconfiguration of Subjectivity" by Ying-Chen Joyce Lin through a question-based interface, and optionally open source sections and version run logs.
 
+**Research arc:** To see how the thesis is ordered, read the [Thesis structure](#thesis-structure) section below.
+
+**Start the reader:** Follow the [Quick start](#quick-start-no-coding-background-required) section below (install Python and Git once, then run the reader from the terminal).
+
 **Bundled data:** `cli_reader_data/` already contains `query_to_top_thesis_chunk.md` and `thesis_chunks_inventory.md`. You do **not** need to regenerate anything to use the reader.
 
 ---
 
 ## Quick start (no coding background required)
 
-You only need to **install two small programs once** (Python and Git), **open a window called “Terminal”** on your computer, and **copy-paste a few lines** that this section gives you. You do not need to write any code; you are running a ready-made reader so you can explore the thesis interactively.
+You only need to **install two small programs once** (Python and Git), **open a window called “Terminal”** on your computer, and **copy-paste a few lines** that this section gives you.
 
 **Simplest path:** install Python → install Git → open terminal → paste the **Option A** commands in [step 1](#1-get-this-folder-from-github) → then run the command in [step 3](#3-run-the-reader) → follow the on-screen instructions.
 
